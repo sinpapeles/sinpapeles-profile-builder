@@ -1,6 +1,5 @@
 import { Form } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
+import RemoveBtn from '../../buttons/Remove';
 
 export default ({ toggle, show, children, id, onRemove }) => {
     return (
@@ -9,16 +8,7 @@ export default ({ toggle, show, children, id, onRemove }) => {
                 <Form.Switch size="lg" id={`show-${id}`} checked={show} onClick={toggle} />
             </div>
             <div className="flex-grow-1">{children}</div>
-            {onRemove && (
-                <div className="ml-3 text-center">
-                    <FontAwesomeIcon
-                        icon={faTrash}
-                        onClick={onRemove}
-                        className="text-danger"
-                        title="Remove"
-                    />
-                </div>
-            )}
+            {onRemove && <RemoveBtn onClick={onRemove} />}
         </div>
     );
 };

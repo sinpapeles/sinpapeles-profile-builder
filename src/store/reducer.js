@@ -3,6 +3,50 @@ import { v4 as uuid } from 'uuid';
 
 export default (state, { type, payload }) => {
     switch (type) {
+        case Actions.UPDATE_IMAGE:
+            return {
+                ...state,
+                image: {
+                    ...state.image,
+                    src: payload,
+                    show: true,
+                },
+            };
+        case Actions.REMOVE_IMAGE:
+            return {
+                ...state,
+                image: {
+                    ...state.image,
+                    src: 'https://www.gravatar.com/avatar/0?d=mp&size=120',
+                    show: false,
+                },
+            };
+        case Actions.TOGGLE_IMAGE:
+            return {
+                ...state,
+                image: {
+                    ...state.image,
+                    show: !state.image.show,
+                },
+            };
+        case Actions.TOGGLE_IMAGE_FORMAT:
+            return {
+                ...state,
+                image: {
+                    ...state.image,
+                    show: true,
+                    circle: !state.image.circle,
+                },
+            };
+        case Actions.TOGGLE_IMAGE_BORDER:
+            return {
+                ...state,
+                image: {
+                    ...state.image,
+                    show: true,
+                    border: !state.image.border,
+                },
+            };
         case Actions.SET_TITLE:
             return {
                 ...state,
@@ -58,7 +102,7 @@ export default (state, { type, payload }) => {
                     },
                 },
             };
-        case Actions.UPDATE_lINK: {
+        case Actions.UPDATE_LINK: {
             const { id, ...link } = payload;
             return {
                 ...state,
