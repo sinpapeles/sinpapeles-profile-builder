@@ -1,0 +1,16 @@
+.sidebar {
+    height: 100%;
+    flex-grow: 1;
+    color: rgb(20, 20, 20);
+    min-width: 400px;
+}
+
+@media (min-width: 890px) {
+    .sidebar {
+        max-width: 600px;
+    }
+}
+
+.sidebar .header {
+    text-align: center;
+}
