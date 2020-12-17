@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { useToggle } from 'react-use';
 
-export default ({ value, onChange, disabled }) => {
+export default ({ value, onChange, disabled, ...props }) => {
     const [editing, toggleEditing] = useToggle();
     const input = useRef(null);
 
@@ -18,6 +18,7 @@ export default ({ value, onChange, disabled }) => {
                 value={value}
                 className={`flex-grow-1 ${disabled && 'text-black-50'}`}
                 onClick={() => toggleEditing(!disabled)}
+                {...props}
             />
         );
     }
@@ -29,6 +30,7 @@ export default ({ value, onChange, disabled }) => {
             onChange={e => onChange(e.target.value)}
             onBlur={() => toggleEditing()}
             ref={input}
+            {...props}
         />
     );
 };

@@ -7,12 +7,13 @@ const [useStore, StoreProvider] = createReducerContext(reducer, {
         show: true,
         circle: true,
         border: true,
-        src: 'https://www.gravatar.com/avatar/0?d=mp',
+        src: 'https://www.gravatar.com/avatar/0?d=mp&size=120',
     },
     title: {
         show: true,
-        text: 'Title',
+        text: 'My Name',
     },
+    bio: { show: false, text: 'Bio...' },
     links: {},
 });
 

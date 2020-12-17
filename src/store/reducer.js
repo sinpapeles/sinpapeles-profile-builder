@@ -63,6 +63,22 @@ export default (state, { type, payload }) => {
                     show: !state.title.show,
                 },
             };
+        case Actions.SET_BIO:
+            return {
+                ...state,
+                bio: {
+                    show: true,
+                    text: payload,
+                },
+            };
+        case Actions.TOGGLE_BIO:
+            return {
+                ...state,
+                bio: {
+                    ...state.bio,
+                    show: !state.bio.show,
+                },
+            };
         case Actions.ADD_LINK:
             const id = uuid();
             const order =

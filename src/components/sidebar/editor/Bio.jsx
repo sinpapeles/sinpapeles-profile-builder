@@ -1,6 +1,6 @@
 import { Form } from 'react-bootstrap';
 import { useStore } from '../../../store/main';
-import { setTitle, toggleTitle } from '../../../store/actions';
+import { setBio, toggleBio } from '../../../store/actions';
 import Box from './Box';
 import InputText from '../../form/InputText';
 
@@ -8,19 +8,21 @@ export default () => {
     const [data, dispatch] = useStore();
 
     const handleChange = value => {
-        dispatch(setTitle(value));
+        dispatch(setBio(value));
     };
     const handleToggle = () => {
-        dispatch(toggleTitle());
+        dispatch(toggleBio());
     };
 
     return (
-        <Box id="title" show={data.title.show} toggle={handleToggle}>
+        <Box id="bio" show={data.bio.show} toggle={handleToggle}>
             <Form.Group className="mb-0">
                 <InputText
-                    value={data.title.text}
+                    as={'textarea'}
+                    rows={3}
+                    value={data.bio.text}
                     onChange={handleChange}
-                    disabled={!data.title.show}
+                    disabled={!data.bio.show}
                 />
             </Form.Group>
         </Box>
