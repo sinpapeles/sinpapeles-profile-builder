@@ -1,23 +1,42 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer, toast } from 'react-toastify';
+import Switch, { Case } from 'react-switch-case';
 import { useSmallScreen } from './hooks/useSmallScreen';
-import { StoreProvider } from './store/main';
+import { StoreProvider, useStore } from './store/main';
 import Sidebar from './components/sidebar/Main';
 import Preview from './components/preview/Main';
+import Welcome from './Welcome';
 
+import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+const Router = () => {
     const isSmallScreen = useSmallScreen();
+    const [data] = useStore();
 
     return (
-        <StoreProvider>
-            <div className="App">
+        <Switch condition={!!data.version}>
+            <Case value={true}>
                 <div className="builder">
                     <Sidebar />
                     {!isSmallScreen && <Preview />}
                 </div>
+            </Case>
+            <Case value={false}>
+                <Welcome />
+            </Case>
+        </Switch>
+    );
+};
+
+function App() {
+    return (
+        <StoreProvider>
+            <div className="App">
+                <Router />
             </div>
+            <ToastContainer />
         </StoreProvider>
     );
 }

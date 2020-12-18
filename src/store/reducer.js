@@ -168,6 +168,8 @@ export default (state, { type, payload }) => {
             return updateLink(state, payload);
         case Actions.SET_THEME:
             return setTheme(state, payload);
+        case Actions.IMPORT_DATA:
+            return payload; // no state
         default:
             throw new Error();
     }

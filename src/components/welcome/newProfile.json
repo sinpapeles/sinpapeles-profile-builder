@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0",
+    "image": {
+        "show": true,
+        "circle": true,
+        "border": true,
+        "src": "https://www.gravatar.com/avatar/0?d=mp&size=120"
+    },
+    "title": {
+        "show": true,
+        "text": "My Name"
+    },
+    "bio": { "show": false, "text": "Bio..." },
+    "links": {},
+    "theme": {
+        "background": "linear-gradient(200deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
+        "color": "black",
+        "font": {
+            "family": "Ubuntu",
+            "url": "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+        }
+    }
+}

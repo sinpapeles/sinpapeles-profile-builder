@@ -13,6 +13,7 @@ export const Actions = {
     TOGGLE_LINK: 'TOGGLE_LINK',
     UPDATE_LINK: 'UPDATE_LINK',
     SET_THEME: 'SET_THEME',
+    IMPORT_DATA: 'IMPORT_DATA',
 };
 
 // IMAGE
@@ -41,3 +42,6 @@ export const updateLink = (id, link) => ({ type: Actions.UPDATE_LINK, payload: {
 
 // THEME
 export const setTheme = theme => ({ type: Actions.SET_THEME, payload: theme });
+
+// IMPORT
+export const importData = data => ({ type: Actions.IMPORT_DATA, payload: data });
