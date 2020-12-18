@@ -1,7 +1,5 @@
-import { useRef, useState } from 'react';
 import { useToggle } from 'react-use';
 import { Saturation, EditableInput, Hue } from 'react-color/lib/components/common';
-import { CustomPicker } from 'react-color';
 import tinycolor from 'tinycolor2';
 
 import './ColorPicker.css';

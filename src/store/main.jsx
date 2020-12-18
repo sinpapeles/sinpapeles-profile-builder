@@ -16,7 +16,13 @@ const [useStore, StoreProvider] = createReducerContext(reducer, {
     },
     bio: { show: false, text: 'Bio...' },
     links: {},
-    theme: themes[0],
+    theme: {
+        ...themes[0],
+        font: {
+            family: 'Ubuntu',
+            url: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+        },
+    },
 });
 
 export { useStore, StoreProvider };

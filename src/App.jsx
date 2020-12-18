@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSmallScreen } from './hooks/useSmallScreen';
 import { StoreProvider } from './store/main';
 import Sidebar from './components/sidebar/Main';
+import Preview from './components/preview/Main';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -14,7 +15,7 @@ function App() {
             <div className="App">
                 <div className="builder">
                     <Sidebar />
-                    {!isSmallScreen && <div className="main-viewer">MAIN VIEW</div>}
+                    {!isSmallScreen && <Preview />}
                 </div>
             </div>
         </StoreProvider>

@@ -18,6 +18,7 @@ export default ({ value, onChange, disabled, ...props }) => {
                 value={value}
                 className={`flex-grow-1 ${disabled && 'text-black-50'}`}
                 onClick={() => toggleEditing(!disabled)}
+                onFocus={() => toggleEditing(!disabled)}
                 {...props}
             />
         );

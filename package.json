@@ -12,6 +12,8 @@
         "bootstrap": "^4.5.3",
         "bootswatch": "^4.5.3",
         "classnames": "^2.2.6",
+        "font-picker-react": "^3.5.2",
+        "http-proxy-middleware": "^1.0.6",
         "md5": "^2.3.0",
         "react": "^17.0.1",
         "react-bootstrap": "^1.4.0",

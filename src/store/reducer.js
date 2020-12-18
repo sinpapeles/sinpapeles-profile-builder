@@ -136,7 +136,7 @@ const updateLink = (state, payload) => {
     };
 };
 
-const setTheme = (state, theme) => ({ ...state, theme });
+const setTheme = (state, theme) => ({ ...state, theme: { ...state.theme, ...theme } });
 
 export default (state, { type, payload }) => {
     switch (type) {

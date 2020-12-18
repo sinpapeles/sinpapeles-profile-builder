@@ -1,0 +1,8 @@
+#font-picker .dropdown-button {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+#font-picker .font-list {
+    background-color: white;
+}

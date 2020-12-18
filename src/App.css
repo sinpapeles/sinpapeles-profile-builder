@@ -13,9 +13,3 @@
     display: flex;
     justify-content: space-between;
 }
-
-.main-viewer {
-    background-color: rgb(200, 200, 200);
-    height: 100%;
-    flex-grow: 1;
-}

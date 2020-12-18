@@ -1,4 +1,4 @@
-import { Card, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { setTheme } from '../../../store/actions';
 import { useStore } from '../../../store/main';
 import ColorPicker from '../../form/ColorPicker';
@@ -13,7 +13,7 @@ export default () => {
         dispatch(setTheme({ ...theme, color }));
     };
     return (
-        <div className="border rounded px-2 pt-2">
+        <div className="border rounded px-2 pt-2 mb-3">
             <Form.Group controlId="Background">
                 <Form.Label>Background</Form.Label>
                 <ColorPicker
