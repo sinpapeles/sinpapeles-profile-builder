@@ -56,7 +56,7 @@ export default ({ show, onClose, value, onChange }) => {
             </Modal.Header>
             <Modal.Body>
                 <div className="mb-3 text-center">
-                    <img src={src} className="img-thumbnail" />
+                    <img src={src} alt="Preview" className="img-thumbnail" />
                 </div>
 
                 <Accordion
@@ -104,7 +104,11 @@ export default ({ show, onClose, value, onChange }) => {
                                     />
                                     <Form.Text>
                                         More info at{' '}
-                                        <a href="https://gravatar.com" target="_blank">
+                                        <a
+                                            href="https://gravatar.com"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
                                             gravatar.com
                                         </a>
                                     </Form.Text>

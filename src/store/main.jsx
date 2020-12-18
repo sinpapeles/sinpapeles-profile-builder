@@ -1,6 +1,7 @@
-import { useState } from 'react';
 import { createReducerContext } from 'react-use';
 import reducer from './reducer';
+
+import themes from '../components/sidebar/themes/gradient.json';
 
 const [useStore, StoreProvider] = createReducerContext(reducer, {
     image: {
@@ -15,6 +16,7 @@ const [useStore, StoreProvider] = createReducerContext(reducer, {
     },
     bio: { show: false, text: 'Bio...' },
     links: {},
+    theme: themes[0],
 });
 
 export { useStore, StoreProvider };

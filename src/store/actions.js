@@ -12,6 +12,7 @@ export const Actions = {
     REMOVE_LINK: 'REMOVE_LINK',
     TOGGLE_LINK: 'TOGGLE_LINK',
     UPDATE_LINK: 'UPDATE_LINK',
+    SET_THEME: 'SET_THEME',
 };
 
 // IMAGE
@@ -37,3 +38,6 @@ export const addLink = () => ({ type: Actions.ADD_LINK });
 export const removeLink = id => ({ type: Actions.REMOVE_LINK, payload: id });
 export const toggleLink = id => ({ type: Actions.TOGGLE_LINK, payload: id });
 export const updateLink = (id, link) => ({ type: Actions.UPDATE_LINK, payload: { id, ...link } });
+
+// THEME
+export const setTheme = theme => ({ type: Actions.SET_THEME, payload: theme });

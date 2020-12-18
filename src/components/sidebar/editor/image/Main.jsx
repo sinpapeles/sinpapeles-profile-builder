@@ -58,7 +58,7 @@ export default () => {
                     <div className="text-center flex-grow-1 mr-2">
                         <img
                             src={image.src}
-                            alt="Profile picture"
+                            alt="Profile"
                             className={classNames}
                             style={{ maxWidth: '90%' }}
                         />

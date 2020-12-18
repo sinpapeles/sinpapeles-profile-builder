@@ -1,0 +1,15 @@
+.ColorPicker .pointer {
+    cursor: pointer;
+}
+.ColorPicker .square {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.ColorPicker.saturation {
+    width: 200px;
+    padding-bottom: 75%;
+    position: relative;
+    overflow: hidden;
+}

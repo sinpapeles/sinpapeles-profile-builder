@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Nav, Tab, Tabs } from 'react-bootstrap';
-import Content from './Content';
+import { Nav } from 'react-bootstrap';
+import Switch, { Case } from 'react-switch-case';
 import { useSmallScreen } from '../../hooks/useSmallScreen';
+import Content from './Content';
+import Theme from './Theme';
 import './Main.css';
 
 export default () => {
     const isSmallScreen = useSmallScreen();
-    const [tab, setTab] = useState('content');
+    const [tab, setTab] = useState('theme');
 
     const onSelectTab = tab => {
         if (tab !== 'preview') {
@@ -24,7 +26,7 @@ export default () => {
                         <Nav.Link eventKey="content">Content</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="themes">Themes</Nav.Link>
+                        <Nav.Link eventKey="theme">Themes</Nav.Link>
                     </Nav.Item>
                     {isSmallScreen && (
                         <Nav.Item>
@@ -34,7 +36,14 @@ export default () => {
                 </Nav>
             </div>
 
-            <Content />
+            <Switch condition={tab}>
+                <Case value="content">
+                    <Content />
+                </Case>
+                <Case value="theme">
+                    <Theme />
+                </Case>
+            </Switch>
         </div>
     );
 };

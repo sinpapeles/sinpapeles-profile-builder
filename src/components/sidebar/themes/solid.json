@@ -1,0 +1,50 @@
+[
+    {
+        "background": "black",
+        "color": "white"
+    },
+    {
+        "background": "white",
+        "color": "black"
+    },
+    {
+        "background": "#0066ff",
+        "color": "white"
+    },
+    {
+        "background": "#9FE7E4",
+        "color": "black"
+    },
+    {
+        "background": "#FEAEBB",
+        "color": "black"
+    },
+    {
+        "background": "#B3F8C8",
+        "color": "black"
+    },
+    {
+        "background": "#A39392",
+        "color": "black"
+    },
+    {
+        "background": "#74BCCB",
+        "color": "black"
+    },
+    {
+        "background": "#A16AE8",
+        "color": "black"
+    },
+    {
+        "background": "#187D7F",
+        "color": "black"
+    },
+    {
+        "background": "#C097D2",
+        "color": "black"
+    },
+    {
+        "background": "#E8EAEC",
+        "color": "black"
+    }
+]
