@@ -1,7 +1,8 @@
 {
-    "name": "really-dlink",
+    "name": "sinpapeles-profile-builder",
     "version": "0.1.0",
     "private": true,
+    "homepage": ".",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.32",
         "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -12,8 +13,11 @@
         "bootstrap": "^4.5.3",
         "bootswatch": "^4.5.3",
         "classnames": "^2.2.6",
+        "file-saver": "^2.0.5",
         "font-picker-react": "^3.5.2",
+        "handlebars": "^4.7.6",
         "http-proxy-middleware": "^1.0.6",
+        "jszip": "^3.5.0",
         "md5": "^2.3.0",
         "react": "^17.0.1",
         "react-bootstrap": "^1.4.0",
@@ -30,8 +34,7 @@
     "scripts": {
         "start": "PORT=2002 BROWSER=none react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "test": "react-scripts test"
     },
     "browserslist": {
         "production": [

@@ -1,21 +1,11 @@
 import { useState } from 'react';
-import md5 from 'md5';
-import { Accordion, Button, Card, Form, Modal, useAccordionToggle } from 'react-bootstrap';
+import { Accordion, Button, Card, Modal, useAccordionToggle } from 'react-bootstrap';
 import ImportFile from './ImportFile';
 import ImportUrl from './ImportUrl';
 import ImportPaste from './ImportPaste';
 
 export default ({ show, onClose }) => {
     const [type, setType] = useState('upload');
-    const [value, setValue] = useState('');
-    const [email, setEmail] = useState();
-
-    const handleEmailChange = e => {
-        const newEmail = e.target.value;
-        const hash = md5(newEmail, { encoding: 'binary' });
-
-        setEmail(newEmail);
-    };
 
     const CustomToggle = ({ children, eventKey, small }) => {
         const decoratedOnClick = useAccordionToggle(eventKey);
@@ -29,10 +19,6 @@ export default ({ show, onClose }) => {
                 {small && <small className="ml-2">{small}</small>}
             </Card.Header>
         );
-    };
-
-    const onSave = () => {
-        onClose();
     };
 
     return (

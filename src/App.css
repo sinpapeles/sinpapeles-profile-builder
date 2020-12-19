@@ -10,6 +10,10 @@
     font-family: 'Ubuntu', cursive;
 }
 
+.welcome {
+    background: linear-gradient(200deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
 .logo {
     font-family: 'Dancing Script', cursive;
     text-transform: lowercase;

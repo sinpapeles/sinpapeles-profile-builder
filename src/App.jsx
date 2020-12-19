@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import Switch, { Case } from 'react-switch-case';
 import { useSmallScreen } from './hooks/useSmallScreen';
 import { StoreProvider, useStore } from './store/main';
 import Sidebar from './components/sidebar/Main';
-import Preview from './components/preview/Main';
+import Preview from './components/preview/Wrapper';
 import Welcome from './Welcome';
 
 import 'react-toastify/dist/ReactToastify.css';
