@@ -56,7 +56,12 @@ export default ({ show, onClose, value, onChange }) => {
             </Modal.Header>
             <Modal.Body>
                 <div className="mb-3 text-center">
-                    <img src={src} alt="Preview" className="img-thumbnail" />
+                    <img
+                        src={src}
+                        alt="Preview"
+                        className="img-thumbnail"
+                        style={{ maxHeight: 250 }}
+                    />
                 </div>
 
                 <Accordion

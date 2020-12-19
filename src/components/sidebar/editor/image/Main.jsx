@@ -60,7 +60,7 @@ export default () => {
                             src={image.src}
                             alt="Profile"
                             className={classNames}
-                            style={{ maxWidth: '90%' }}
+                            style={{ maxWidth: '90%', maxHeight: 250 }}
                         />
                     </div>
                     <div className="d-flex flex-column" style={{ minWidth: 110 }}>
