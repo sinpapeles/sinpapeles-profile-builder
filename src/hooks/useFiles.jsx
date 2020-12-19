@@ -21,7 +21,7 @@ Profile generated using "Sinpapeles Profile Builder" at https://profile.sinpapel
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>{{title}}</title>
-    <script src="https://7002p57g1to7o68ego7anbl87tj814c2fnpsqje77rf1ar1u8854qg0.siasky.net/" type="module"></script>
+    <script src="https://7004roudcacjku52d8up9m9hql6i35nvicm0t92tt8poqsadqqm2tu8.siasky.net/" type="module"></script>
     <style>
         body{margin:0; height: 100vh;}
     </style>
