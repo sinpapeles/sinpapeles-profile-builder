@@ -38,10 +38,10 @@ export default () => {
                         Profile Builder
                     </div>
 
-                    <div className="pt-3 px-3">
+                    <div className="pt-3 px-3 overflow-auto" style={{ maxWidth: '100vw' }}>
                         <Nav
                             variant="tabs"
-                            className="border-bottom-0"
+                            className="border-bottom-0 flex-nowrap"
                             fill
                             activeKey={tab}
                             onSelect={setTab}
