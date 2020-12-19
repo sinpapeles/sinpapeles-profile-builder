@@ -8,6 +8,7 @@ import ModalImport from './components/welcome/ModalImport';
 import newProfile from './components/welcome/newProfile.json';
 import { useStore } from './store/main';
 import { importData } from './store/actions';
+import ModalAbout from './components/welcome/ModalAbout';
 
 console.log({ newProfile });
 
@@ -40,6 +41,7 @@ export default () => {
                 </div>
                 <div className="mb-2">
                     <small>A truly fully decentralised open source profile generator.</small>
+                    <ModalAbout />
                 </div>
             </div>
             <ModalImport show={show} onClose={toggle} />
