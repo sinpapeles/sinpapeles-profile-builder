@@ -26,6 +26,7 @@ Profile generated using "Sinpapeles Profile Builder" at https://profile.sinpapel
         body{margin:0; height: 100vh;}
     </style>
 
+    <meta name="author" content="https://profile.sinpapeles.xyz">
     <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{description}}" />
     {{#if image }}
