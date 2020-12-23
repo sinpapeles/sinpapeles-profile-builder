@@ -25,7 +25,7 @@ export default () => {
             <div className="App welcome d-flex flex-column justify-content-between align-items-center">
                 <div />
                 <div className="title text-center">
-                    <text className="logo">Sinpapeles</text>
+                    <span className="logo">Sinpapeles</span>
                     <br />
                     Profile Builder
                 </div>

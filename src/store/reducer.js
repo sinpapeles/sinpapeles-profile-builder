@@ -1,14 +1,21 @@
 import { Actions } from './actions';
 import { v4 as uuid } from 'uuid';
 
-const updateImage = (state, payload) => ({
-    ...state,
-    image: {
-        ...state.image,
-        src: payload,
-        show: true,
-    },
-});
+const updateImage = (state, { url: src, replaceOriginal }) => {
+    const newData = { src, show: true };
+
+    if (replaceOriginal) {
+        newData.original = src;
+    }
+
+    return {
+        ...state,
+        image: {
+            ...state.image,
+            ...newData,
+        },
+    };
+};
 
 const removeImage = state => ({
     ...state,
