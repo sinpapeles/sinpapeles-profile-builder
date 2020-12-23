@@ -13,7 +13,7 @@ export default () => {
 
         const location = url.endsWith('/data.json') ? url : `${url}/data.json`;
 
-        fetch(location)
+        fetch(location, { mode: 'no-cors' })
             .then(res => res.json())
             .then(data => {
                 if (!data.version) {
