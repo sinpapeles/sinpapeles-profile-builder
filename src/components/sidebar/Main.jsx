@@ -38,7 +38,15 @@ export default () => {
                         Profile Builder
                     </div>
 
-                    <div className="pt-3 px-3 overflow-auto" style={{ maxWidth: '100vw' }}>
+                    <div
+                        className="pt-3 px-3 flex-grow-0"
+                        style={{
+                            maxWidth: '100vw',
+                            minHeight: 56,
+                            overflowX: 'auto',
+                            overflowY: 'hidden',
+                        }}
+                    >
                         <Nav
                             variant="tabs"
                             className="border-bottom-0 flex-nowrap"

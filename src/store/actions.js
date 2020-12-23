@@ -17,7 +17,10 @@ export const Actions = {
 };
 
 // IMAGE
-export const updateImage = url => ({ type: Actions.UPDATE_IMAGE, payload: url });
+export const updateImage = (url, replaceOriginal = true) => ({
+    type: Actions.UPDATE_IMAGE,
+    payload: { url, replaceOriginal },
+});
 export const removeImage = () => ({ type: Actions.REMOVE_IMAGE });
 export const toggleImage = () => ({ type: Actions.TOGGLE_IMAGE });
 export const toggleImageFormat = () => ({ type: Actions.TOGGLE_IMAGE_FORMAT });

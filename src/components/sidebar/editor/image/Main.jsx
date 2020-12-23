@@ -11,12 +11,15 @@ import {
 } from '../../../../store/actions';
 import Box from '../Box';
 import ModalEdit from './ModalEdit';
+import ModalCrop from './ModalCrop';
 import RemoveBtn from '../../../buttons/Remove';
 import EditBtn from '../../../buttons/Edit';
+import CropBtn from '../../../buttons/Crop';
 
 export default () => {
     const [{ image }, dispatch] = useStore();
     const [modal, toggleModal] = useToggle(false);
+    const [cropModal, toggleCropModal] = useToggle(false);
 
     const handleToggle = () => {
         dispatch(toggleImage());
@@ -24,6 +27,10 @@ export default () => {
 
     const handleChange = url => {
         dispatch(updateImage(url));
+    };
+
+    const handleChangeCrop = url => {
+        dispatch(updateImage(url, false));
     };
 
     const handleRemove = () => {
@@ -52,6 +59,12 @@ export default () => {
                 onClose={toggleModal}
                 value={image.src}
                 onChange={handleChange}
+            />
+            <ModalCrop
+                show={cropModal}
+                onClose={toggleCropModal}
+                value={image.original || image.src}
+                onChange={handleChangeCrop}
             />
             <Box id="image" show={image.show} toggle={handleToggle}>
                 <div className="d-flex">
@@ -82,8 +95,9 @@ export default () => {
                                 />
                             </Form.Label>
                         </div>
-                        <div className="text-center">
+                        <div className="text-center text-nowrap">
                             <EditBtn className="mr-2" onClick={toggleModal} />
+                            <CropBtn className="mr-2" onClick={toggleCropModal} />
                             <RemoveBtn onClick={handleRemove} />
                         </div>
                     </div>

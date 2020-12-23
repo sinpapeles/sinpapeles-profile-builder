@@ -14,14 +14,14 @@ export const useFiles = () => {
 <html>
 
 <!--
-Profile generated using "Sinpapeles Profile Builder" at https://profile.sinpapeles.xyz
+Profile generated using "Sinpapeles Profile Builder" at https://sinpapeles.hns.siasky.net
 -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>{{title}}</title>
-    <script src="https://7004roudcacjku52d8up9m9hql6i35nvicm0t92tt8poqsadqqm2tu8.siasky.net/" type="module"></script>
+    <script src="https://f45.hns.siasky.net/" type="module"></script>
     <style>
         body{margin:0; height: 100vh;}
     </style>
@@ -41,7 +41,7 @@ Profile generated using "Sinpapeles Profile Builder" at https://profile.sinpapel
 </html>
 `);
 
-    const profile = JSON.stringify(data);
+    const profile = JSON.stringify(data).replace(/'/g, '&#39;');
 
     const html = template({
         title: data.title.text && data.title.show ? data.title.text : 'Sinapeles :: Profile',

@@ -87,6 +87,7 @@ export default ({ show, onClose, value, onChange }) => {
                                     </Form.Label>
                                     <Form.Control
                                         type="file"
+                                        accept="image/x-png,image/gif,image/jpeg"
                                         onChange={onUploadHandler}
                                         className="position-absolute"
                                         style={{ top: 0, visibility: 'hidden' }}
@@ -108,7 +109,7 @@ export default ({ show, onClose, value, onChange }) => {
                                         onChange={handleEmailChange}
                                     />
                                     <Form.Text>
-                                        More info at{' '}
+                                        Your email won't be public. More info at{' '}
                                         <a
                                             href="https://gravatar.com"
                                             target="_blank"
@@ -116,6 +117,7 @@ export default ({ show, onClose, value, onChange }) => {
                                         >
                                             gravatar.com
                                         </a>
+                                        .
                                     </Form.Text>
                                 </Form.Group>
                             </Card.Body>
